@@ -179,7 +179,14 @@
       <h2>Get a free consult</h2>
       <p class="muted">Tell us about your portfolio. We’ll reply same day.</p>
       <!-- Netlify Forms ready: deploy on Netlify and you get form submissions emailed + dashboard -->
-      <form name="brightstay-contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+      <form name="brightstay-contact"
+      method="POST"
+      data-netlify="true"
+      netlify-honeypot="bot-field"
+      action="/success.html">
+  <input type="hidden" name="form-name" value="brightstay-contact">
+  ...
+</form>
         <input type="hidden" name="form-name" value="brightstay-contact">
         <p style="display:none"><label>Don’t fill this out if you're human: <input name="bot-field" /></label></p>
         <div class="twoCol">
