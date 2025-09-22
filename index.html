@@ -39,7 +39,7 @@
     .kpi{background:transparent;border:1px solid var(--outline);border-radius:14px;padding:16px;text-align:center}
     .kpi strong{font-size:26px;color:#fff}
     .list{line-height:1.7;color:#cfe0ff}
-    .muted{color:var(--muted)}
+    .muted{color:#8ea0c3}
     .foot{display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between;border-top:1px solid var(--outline);padding:22px 0;margin-top:30px}
     form{display:grid;gap:10px}
     input,textarea,select{background:#0c1530;border:1px solid var(--outline);color:#e6ecff;border-radius:12px;padding:12px;font:inherit}
@@ -65,7 +65,7 @@
   <main class="container">
     <section class="hero">
       <span class="chip">Hunterdon County • Ops Lite for Small Landlords</span>
-      <h1 class="h1">Keep units <strong>rent-ready, filled,</strong> and <strong>profitable</strong> — without full-service PM fees.</h1>
+      <h1 class="h1">Keep units <strong>rent‑ready, filled,</strong> and <strong>profitable</strong> — without full‑service PM fees.</h1>
       <p class="sub">BrightStay Management delivers a lightweight, modular alternative to traditional property management: preventive inspections, maintenance coordination, fast leasing, and project oversight. You keep rent collection & accounting — we handle the headaches.</p>
       <div class="ctaRow">
         <a class="btn primary" href="#contact">Get a free consult</a>
@@ -94,20 +94,20 @@
         </article>
         <article class="card">
           <div class="pill">Tier 2 • Per vacancy</div>
-          <h3>Leasing Add-On</h3>
+          <h3>Leasing Add‑On</h3>
           <ul class="list">
-            <li>Pro photos & multi-site listings</li>
-            <li>Pre-screening + virtual/in-person showings</li>
+            <li>Pro photos & multi‑site listings</li>
+            <li>Pre‑screening + virtual/in‑person showings</li>
             <li>Full screening (credit, background, eviction)</li>
-            <li>Lease draft + move-in checklist</li>
+            <li>Lease draft + move‑in checklist</li>
           </ul>
           <div class="price">½ month rent <span class="muted">per lease</span></div>
         </article>
         <article class="card">
-          <div class="pill">Tier 3 • Project-based</div>
+          <div class="pill">Tier 3 • Project‑based</div>
           <h3>Turnovers & CapEx</h3>
           <ul class="list">
-            <li>Rent-ready turns (paint, floors, clean, punch)</li>
+            <li>Rent‑ready turns (paint, floors, clean, punch)</li>
             <li>CapEx lite (HVAC, water heater, roof patch)</li>
             <li>2–3 competitive bids & oversight</li>
             <li>Photo documentation & warranties</li>
@@ -124,10 +124,10 @@
           <h3>Ops Lite Essentials</h3>
           <p class="muted">Best for 5–30 scattered units.</p>
           <div class="price">$149 <span class="muted">/unit/mo</span></div>
-          <p class="note">No long-term contracts. Cancel anytime with 30-day notice.</p>
+          <p class="note">No long‑term contracts. Cancel anytime with 30‑day notice.</p>
         </article>
         <article class="card">
-          <h3>Leasing Add-On</h3>
+          <h3>Leasing Add‑On</h3>
           <div class="price">½ month’s rent</div>
           <p class="muted">Only when we fill a vacancy.</p>
         </article>
@@ -159,7 +159,7 @@
         </div>
         <div class="card">
           <strong class="badge">Step 4</strong>
-          <h3>On-demand leasing & projects</h3>
+          <h3>On‑demand leasing & projects</h3>
           <p class="muted">When vacancies or CapEx pop up, we switch on Tier 2/3 to keep cashflow humming.</p>
         </div>
       </div>
@@ -168,7 +168,9 @@
     <section id="contact">
       <h2>Get a free consult</h2>
       <p class="muted">Tell us about your portfolio. We’ll reply same day.</p>
-      <form name="brightstay-contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/success.html">
+      <p class="muted">Or reach us directly: <strong>bprotas26@gmail.com</strong> • <strong>(973) 943-0480</strong></p>
+      <!-- Netlify form: make sure this exact form name appears in the hidden input -->
+      <form name="brightstay-contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="success.html">
         <input type="hidden" name="form-name" value="brightstay-contact">
         <p style="display:none"><label>Don’t fill this out if you're human: <input name="bot-field" /></label></p>
         <div class="twoCol">
@@ -189,39 +191,17 @@
       <h2>FAQs</h2>
       <div class="grid cards">
         <div class="card"><h3>Do you replace my full PM?</h3><p class="muted">We’re modular. Keep accounting/rent collection; we handle inspections, maintenance, leasing & projects.</p></div>
-        <div class="card"><h3>Any long-term contract?</h3><p class="muted">No. Month-to-month with 30-day notice.</p></div>
+        <div class="card"><h3>Any long‑term contract?</h3><p class="muted">No. Month‑to‑month with 30‑day notice.</p></div>
         <div class="card"><h3>Where do you operate?</h3><p class="muted">Flemington & greater Hunterdon County. Ask about Central NJ.</p></div>
       </div>
     </section>
 
     <footer class="foot">
       <div>© <span id="y"></span> BrightStay Management • Hunterdon County, NJ</div>
-      <div class="muted">Email: bprotas26@gmail.com • Phone: (973) 943-0480div>
+      <div class="muted">Email: bprotas26@gmail.com • Phone: (973) 943-0480</div>
     </footer>
   </main>
 
-  <!-- Success Page -->
-  <div hidden>
-    <div id="success-page">
-      <h1>Thank you! ✅</h1>
-      <p>We’ve received your request. We’ll reply the same day.</p>
-      <p><a href="/">← Back to BrightStay</a></p>
-    </div>
-  </div>
-
   <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
-</body>
-</html>
-
-<!-- success.html -->
-<!doctype html>
-<html lang="en">
-<meta charset="utf-8">
-<title>Thanks!</title>
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<body style="font-family:system-ui;max-width:700px;margin:4rem auto;padding:0 1rem">
-  <h1>Thanks — we’ve got your message ✅</h1>
-  <p>We’ll reply same day. If it’s urgent, call/text <strong>(your phone)</strong> or email <strong>your@email.com</strong>.</p>
-  <p><a href="/">← Back to BrightStay</a></p>
 </body>
 </html>
