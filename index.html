@@ -8,200 +8,53 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  <style>
-    :root{--bg:#0b1220;--bg-soft:#121a2c;--brand:#ffd84d;--ink:#0c1424;--muted:#8ea0c3;--card:#0f1730;--white:#ffffff;--green:#22c55e;--outline:rgba(255,255,255,.08)}
-    *{box-sizing:border-box}
-    html,body{margin:0;padding:0;background:var(--bg);color:#e6ecff;font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
-    a{color:var(--brand);text-decoration:none}
-    .container{max-width:1100px;margin:0 auto;padding:24px}
-    header{position:sticky;top:0;backdrop-filter:saturate(140%) blur(8px);background:rgba(11,18,32,.7);border-bottom:1px solid var(--outline);z-index:30}
-    .nav{display:flex;align-items:center;justify-content:space-between}
-    .logo{display:flex;gap:12px;align-items:center;font-weight:800;letter-spacing:.2px}
-    .logoMark{width:36px;height:36px;border-radius:10px;background:conic-gradient(from 180deg at 50% 50%, #fff000, #ffd84d, #ffeaa7, #fff2c4, #ffd84d);display:grid;place-items:center;box-shadow:0 10px 30px rgba(255,216,77,.3)}
-    .logoMark:before{content:"";width:18px;height:18px;border-radius:4px;background:#0b1220;box-shadow:0 -12px 0 0 #0b1220}
-    .chip{border:1px solid var(--outline);padding:6px 10px;border-radius:999px;color:#cfe0ff;background:rgba(255,255,255,.03)}
-    .hero{padding:72px 0 36px;display:grid;gap:22px}
-    .h1{font-size:clamp(28px,5vw,46px);line-height:1.1;margin:0}
-    .h1 strong{color:var(--brand)}
-    .sub{color:var(--muted);max-width:800px}
-    .ctaRow{display:flex;flex-wrap:wrap;gap:12px;margin-top:8px}
-    .btn{padding:14px 18px;border-radius:14px;border:1px solid var(--outline);display:inline-flex;gap:10px;align-items:center}
-    .btn.primary{background:var(--brand);color:var(--ink);border-color:transparent;font-weight:700}
-    .btn.ghost{background:transparent}
-    .grid{display:grid;gap:18px}
-    .cards{grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
-    .card{background:var(--card);border:1px solid var(--outline);border-radius:18px;padding:18px;display:grid;gap:10px}
-    .card h3{margin:0 0 6px 0}
-    .price{font-weight:800;font-size:22px}
-    .pill{font-size:12px;color:#a6b7dd;border:1px dashed var(--outline);padding:4px 8px;border-radius:999px}
-    section{padding:34px 0}
-    .kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
-    .kpi{background:transparent;border:1px solid var(--outline);border-radius:14px;padding:16px;text-align:center}
-    .kpi strong{font-size:26px;color:#fff}
-    .list{line-height:1.7;color:#cfe0ff}
-    .muted{color:#8ea0c3}
-    .foot{display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between;border-top:1px solid var(--outline);padding:22px 0;margin-top:30px}
-    form{display:grid;gap:10px}
-    input,textarea,select{background:#0c1530;border:1px solid var(--outline);color:#e6ecff;border-radius:12px;padding:12px;font:inherit}
-    textarea{min-height:120px}
-    .note{font-size:12px;color:#9ab1e3}
-    .twoCol{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
-    .badge{display:inline-block;background:rgba(34,197,94,.15);color:#b9f5c8;border:1px solid rgba(34,197,94,.35);padding:6px 10px;border-radius:999px;font-size:12px}
-    @media (max-width:720px){.kpis{grid-template-columns:1fr 1fr}}
-  </style>
 </head>
-<body>
-  <header>
-    <div class="container nav">
-      <div class="logo"><span class="logoMark"></span> BrightStay <span class="muted">Management</span></div>
-      <nav class="muted" style="display:flex;gap:16px">
-        <a href="#services">Services</a>
-        <a href="#pricing">Pricing</a>
-        <a href="#contact">Contact</a>
-      </nav>
+<body style="font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif; margin:0; background:#0b1220; color:#e6ecff">
+  <header style="padding:20px; background:#121a2c; position:sticky; top:0">
+    <div style="display:flex; justify-content:space-between; align-items:center; max-width:1100px; margin:0 auto;">
+      <div style="font-weight:800; font-size:20px; color:#ffd84d;">BrightStay <span style="color:#8ea0c3">Management</span></div>
+      <nav><a href="#services" style="color:#ffd84d; margin-right:20px">Services</a><a href="#pricing" style="color:#ffd84d; margin-right:20px">Pricing</a><a href="#contact" style="color:#ffd84d">Contact</a></nav>
     </div>
   </header>
 
-  <main class="container">
-    <section class="hero">
-      <span class="chip">Hunterdon County • Ops Lite for Small Landlords</span>
-      <h1 class="h1">Keep units <strong>rent‑ready, filled,</strong> and <strong>profitable</strong> — without full‑service PM fees.</h1>
-      <p class="sub">BrightStay Management delivers a lightweight, modular alternative to traditional property management: preventive inspections, maintenance coordination, fast leasing, and project oversight. You keep rent collection & accounting — we handle the headaches.</p>
-      <div class="ctaRow">
-        <a class="btn primary" href="#contact">Get a free consult</a>
-        <a class="btn ghost" href="#pricing">See pricing</a>
-      </div>
-      <div class="kpis">
-        <div class="kpi"><strong>7–10 days</strong><div class="muted">Typical unit turnover</div></div>
-        <div class="kpi"><strong>↓ 40%</strong><div class="muted">Fewer maintenance surprises</div></div>
-        <div class="kpi"><strong>2–3×</strong><div class="muted">More qualified leasing leads</div></div>
-      </div>
+  <main style="max-width:1100px; margin:0 auto; padding:24px;">
+    <section style="padding:50px 0; text-align:center;">
+      <h1 style="font-size:36px; line-height:1.2">Keep units <span style="color:#ffd84d">rent‑ready, filled,</span> and <span style="color:#ffd84d">profitable</span> — without full‑service PM fees.</h1>
+      <p style="color:#8ea0c3; max-width:700px; margin:20px auto;">BrightStay Management delivers a lightweight, modular alternative to traditional property management: preventive inspections, maintenance coordination, fast leasing, and project oversight. You keep rent collection & accounting — we handle the headaches.</p>
+      <a href="#" id="scheduleBtn" style="background:#ffd84d; color:#0c1424; padding:14px 20px; border-radius:8px; font-weight:700; text-decoration:none;">Get a free consult</a>
     </section>
 
-    <section id="services">
-      <h2>Services</h2>
-      <div class="grid cards">
-        <article class="card">
-          <div class="pill">Tier 1 • Subscription</div>
-          <h3>Essentials</h3>
-          <ul class="list">
-            <li>Quarterly preventive inspections (filters, leaks, smoke/CO)</li>
-            <li>Seasonal maintenance coordination</li>
-            <li>Emergency vendor dispatch (24/7)</li>
-            <li>Tenant portal for requests & updates</li>
-          </ul>
-          <div class="price">$149 <span class="muted">/unit/mo</span></div>
-        </article>
-        <article class="card">
-          <div class="pill">Tier 2 • Per vacancy</div>
-          <h3>Leasing Add‑On</h3>
-          <ul class="list">
-            <li>Pro photos & multi‑site listings</li>
-            <li>Pre‑screening + virtual/in‑person showings</li>
-            <li>Full screening (credit, background, eviction)</li>
-            <li>Lease draft + move‑in checklist</li>
-          </ul>
-          <div class="price">½ month rent <span class="muted">per lease</span></div>
-        </article>
-        <article class="card">
-          <div class="pill">Tier 3 • Project‑based</div>
-          <h3>Turnovers & CapEx</h3>
-          <ul class="list">
-            <li>Rent‑ready turns (paint, floors, clean, punch)</li>
-            <li>CapEx lite (HVAC, water heater, roof patch)</li>
-            <li>2–3 competitive bids & oversight</li>
-            <li>Photo documentation & warranties</li>
-          </ul>
-          <div class="price">Cost + 10–12% <span class="muted">coordination fee</span></div>
-        </article>
+    <section id="contact" style="margin-top:50px;">
+      <h2>Book a consult</h2>
+      <p style="color:#8ea0c3">Pick a time that works for you. Or reach us directly: <strong>bprotas26@gmail.com</strong> • <strong>(973) 943‑0480</strong>.</p>
+      <div style="background:#0f1730; border:1px solid rgba(255,255,255,.1); border-radius:12px; padding:0; overflow:hidden;">
+        <!-- Calendly inline widget -->
+        <div class="calendly-inline-widget" data-url="https://calendly.com/bprotas26/consult?hide_event_type_details=1&hide_gdpr_banner=1" style="min-width:320px;height:700px"></div>
       </div>
+      <p style="font-size:14px; color:#9ab1e3">Scheduling is instant and you’ll get a calendar invite + reminders automatically.</p>
     </section>
 
-    <section id="pricing">
-      <h2>Simple Pricing</h2>
-      <div class="grid cards">
-        <article class="card">
-          <h3>Ops Lite Essentials</h3>
-          <p class="muted">Best for 5–30 scattered units.</p>
-          <div class="price">$149 <span class="muted">/unit/mo</span></div>
-          <p class="note">No long‑term contracts. Cancel anytime with 30‑day notice.</p>
-        </article>
-        <article class="card">
-          <h3>Leasing Add‑On</h3>
-          <div class="price">½ month’s rent</div>
-          <p class="muted">Only when we fill a vacancy.</p>
-        </article>
-        <article class="card">
-          <h3>Turnovers & CapEx</h3>
-          <div class="price">Cost + 10–12%</div>
-          <p class="muted">Transparent bids. You approve before work starts.</p>
-        </article>
-      </div>
-    </section>
-
-    <section>
-      <h2>How it works</h2>
-      <div class="twoCol">
-        <div class="card">
-          <strong class="badge">Step 1</strong>
-          <h3>Free consult & property intake</h3>
-          <p class="muted">We review units, current processes, and pain points; then tailor a plan by tier.</p>
-        </div>
-        <div class="card">
-          <strong class="badge">Step 2</strong>
-          <h3>Onboarding & vendor setup</h3>
-          <p class="muted">Create your portal, import units/tenants, and assign vetted local vendors.</p>
-        </div>
-        <div class="card">
-          <strong class="badge">Step 3</strong>
-          <h3>Quarterly inspections</h3>
-          <p class="muted">We proactively find issues and keep maintenance predictable.</p>
-        </div>
-        <div class="card">
-          <strong class="badge">Step 4</strong>
-          <h3>On‑demand leasing & projects</h3>
-          <p class="muted">When vacancies or CapEx pop up, we switch on Tier 2/3 to keep cashflow humming.</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact">
-      <h2>Get a free consult</h2>
-      <p class="muted">Tell us about your portfolio. We’ll reply same day.</p>
-      <p class="muted">Or reach us directly: <strong>bprotas26@gmail.com</strong> • <strong>(973) 943-0480</strong></p>
-      <!-- Netlify form: make sure this exact form name appears in the hidden input -->
-      <form name="brightstay-contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="success.html">
-        <input type="hidden" name="form-name" value="brightstay-contact">
-        <p style="display:none"><label>Don’t fill this out if you're human: <input name="bot-field" /></label></p>
-        <div class="twoCol">
-          <input name="name" placeholder="Your name" required>
-          <input name="email" type="email" placeholder="Email" required>
-        </div>
-        <div class="twoCol">
-          <input name="phone" placeholder="Phone (optional)">
-          <input name="units" type="number" min="1" placeholder="# of units">
-        </div>
-        <textarea name="message" placeholder="What are your current pain points?"></textarea>
-        <button class="btn primary" type="submit">Request consult</button>
-        <div class="note">Prefer to book directly? <a href="#" title="Replace with Calendly link">Schedule on Calendly</a>.</div>
-      </form>
-    </section>
-
-    <section>
-      <h2>FAQs</h2>
-      <div class="grid cards">
-        <div class="card"><h3>Do you replace my full PM?</h3><p class="muted">We’re modular. Keep accounting/rent collection; we handle inspections, maintenance, leasing & projects.</p></div>
-        <div class="card"><h3>Any long‑term contract?</h3><p class="muted">No. Month‑to‑month with 30‑day notice.</p></div>
-        <div class="card"><h3>Where do you operate?</h3><p class="muted">Flemington & greater Hunterdon County. Ask about Central NJ.</p></div>
-      </div>
-    </section>
-
-    <footer class="foot">
+    <footer style="border-top:1px solid rgba(255,255,255,.1); padding:20px; margin-top:40px; display:flex; justify-content:space-between; flex-wrap:wrap; color:#8ea0c3">
       <div>© <span id="y"></span> BrightStay Management • Hunterdon County, NJ</div>
-      <div class="muted">Email: bprotas26@gmail.com • Phone: (973) 943-0480</div>
+      <div>Email: bprotas26@gmail.com • Phone: (973) 943‑0480</div>
     </footer>
   </main>
 
-  <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
+  <!-- Calendly embed -->
+  <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+  <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+  <script>
+    document.getElementById('y').textContent=new Date().getFullYear();
+    document.addEventListener('DOMContentLoaded', function(){
+      var btn = document.getElementById('scheduleBtn');
+      if(btn){
+        btn.addEventListener('click', function(e){
+          e.preventDefault();
+          Calendly.initPopupWidget({ url: 'https://calendly.com/bprotas26/consult?hide_gdpr_banner=1' });
+          return false;
+        });
+      }
+    });
+  </script>
 </body>
 </html>
